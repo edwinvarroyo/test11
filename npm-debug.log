@@ -34,10 +34,10 @@
 17 silly publish      jade: '~1.11.0',
 17 silly publish      morgan: '~1.6.1',
 17 silly publish      'serve-favicon': '~2.3.0' },
-17 silly publish   gitHead: 'c61e90735589f843793f77070116a487de213278',
+17 silly publish   gitHead: '30e16ba94ae9af0850d6fea1f2329211147ba1e6',
 17 silly publish   readme: 'ERROR: No README data found!',
 17 silly publish   _id: 'Mayra@0.0.0',
-17 silly publish   _shasum: '61f097d8dce51efafcc6ff054180973c9160d424',
+17 silly publish   _shasum: '1342c87b7278d79791c0ac8aef26c640411edf93',
 17 silly publish   _from: '.' }
 18 verbose getPublishConfig undefined
 19 silly mapToRegistry name Mayra
@@ -46,23 +46,46 @@
 22 silly mapToRegistry uri https://registry.npmjs.org/Mayra
 23 verbose publish registryBase https://registry.npmjs.org/
 24 silly publish uploading /home/edwin/.npm/Mayra/0.0.0/package.tgz
-25 verbose stack Error: auth required for publishing
-25 verbose stack     at CachingRegistryClient.publish (/usr/lib/node_modules/npm/node_modules/npm-registry-client/lib/publish.js:30:14)
-25 verbose stack     at /usr/lib/node_modules/npm/lib/publish.js:134:14
-25 verbose stack     at mapToRegistry (/usr/lib/node_modules/npm/lib/utils/map-to-registry.js:55:3)
-25 verbose stack     at publish_ (/usr/lib/node_modules/npm/lib/publish.js:104:3)
-25 verbose stack     at Array.<anonymous> (/usr/lib/node_modules/npm/node_modules/slide/lib/bind-actor.js:15:8)
-25 verbose stack     at LOOP (/usr/lib/node_modules/npm/node_modules/slide/lib/chain.js:15:14)
-25 verbose stack     at LOOP (/usr/lib/node_modules/npm/node_modules/slide/lib/chain.js:14:28)
-25 verbose stack     at chain (/usr/lib/node_modules/npm/node_modules/slide/lib/chain.js:20:5)
-25 verbose stack     at /usr/lib/node_modules/npm/lib/publish.js:73:5
-25 verbose stack     at RES (/usr/lib/node_modules/npm/node_modules/inflight/inflight.js:23:14)
-26 verbose cwd /home/edwin/Documentos/test11
-27 error Linux 3.19.0-49-generic
-28 error argv "/usr/bin/nodejs" "/usr/bin/npm" "publish"
-29 error node v4.2.6
-30 error npm  v2.14.12
-31 error code ENEEDAUTH
-32 error need auth auth required for publishing
-32 error need auth You need to authorize this machine using `npm adduser`
-33 verbose exit [ 1, true ]
+25 verbose request uri https://registry.npmjs.org/Mayra
+26 verbose request sending authorization for write operation
+27 info attempt registry request try #1 at 17:24:43
+28 verbose request using bearer token for auth
+29 verbose request id 0658b350853ad929
+30 http request PUT https://registry.npmjs.org/Mayra
+31 http 400 https://registry.npmjs.org/Mayra
+32 verbose headers { 'content-type': 'application/json',
+32 verbose headers   'cache-control': 'max-age=300',
+32 verbose headers   'content-length': '54',
+32 verbose headers   'accept-ranges': 'bytes',
+32 verbose headers   date: 'Thu, 04 Feb 2016 23:24:51 GMT',
+32 verbose headers   via: '1.1 varnish',
+32 verbose headers   connection: 'keep-alive',
+32 verbose headers   'x-served-by': 'cache-dfw1820-DFW',
+32 verbose headers   'x-cache': 'MISS',
+32 verbose headers   'x-cache-hits': '0',
+32 verbose headers   'x-timer': 'S1454628284.323489,VS0,VE7379' }
+33 verbose request invalidating /home/edwin/.npm/registry.npmjs.org/Mayra on PUT
+34 error publish Failed PUT 400
+35 verbose stack Error: name can no longer contain capital letters : Mayra
+35 verbose stack     at makeError (/usr/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:264:12)
+35 verbose stack     at CachingRegistryClient.<anonymous> (/usr/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:252:14)
+35 verbose stack     at Request._callback (/usr/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:172:14)
+35 verbose stack     at Request.self.callback (/usr/lib/node_modules/npm/node_modules/request/request.js:198:22)
+35 verbose stack     at emitTwo (events.js:87:13)
+35 verbose stack     at Request.emit (events.js:172:7)
+35 verbose stack     at Request.<anonymous> (/usr/lib/node_modules/npm/node_modules/request/request.js:1082:10)
+35 verbose stack     at emitOne (events.js:82:20)
+35 verbose stack     at Request.emit (events.js:169:7)
+35 verbose stack     at IncomingMessage.<anonymous> (/usr/lib/node_modules/npm/node_modules/request/request.js:1009:12)
+36 verbose statusCode 400
+37 verbose pkgid Mayra
+38 verbose cwd /home/edwin/Documentos/test11
+39 error Linux 3.19.0-49-generic
+40 error argv "/usr/bin/nodejs" "/usr/bin/npm" "publish"
+41 error node v4.2.6
+42 error npm  v2.14.12
+43 error code E400
+44 error name can no longer contain capital letters : Mayra
+45 error If you need help, you may report this error at:
+45 error     <https://github.com/npm/npm/issues>
+46 verbose exit [ 1, true ]
